@@ -1,0 +1,19 @@
+<div class="dropdown">
+    <label class="dropdown__label" for="dropdow">{{ label }}</label>
+
+    <select
+        #mySelect
+        class="dropdown__select"
+        id="dropdow"
+        (change)="onSelectOption($event)"
+    >
+        <option [value]="DEFAULT_VALUE">--no select--</option>
+        <option
+            *ngFor="let option of options"
+            [value]="optionLabel ? option[optionLabel] : option"
+            class="dropdown__select__option"
+        >
+            {{ optionLabel ? option[optionLabel] : option }}
+        </option>
+    </select>
+</div>

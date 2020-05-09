@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+$scr-light:'src/assets/fonts/Lato-Light.ttf';
+$src-regular: 'src/assets/fonts/Lato-Regular.ttf';
+$src-bold: 'src/assets/fonts/Lato-Bold.ttf';
+
+$family: "Lato";
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+    font-family: $family;
+		src: url('#{$src}') format('truetype'); // Safari, Android, iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+@include fontFace($family,$scr-light,normal,300);
+@include fontFace($family,$src-regular,normal,400);
+@include fontFace($family,$src-bold,normal,700);
+
+
+header{
+  /*--https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1E88E5--*/
+  background-color: #1e88e5;
+  height: 4em;
+}
+body {
+  font-family: $family;
+  background-color:#e1e2e1;
+  margin: 0;
+}
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  margin-top: 20px;
+  background:#fff;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+   0 1px 1px 0 rgba(0,0,0,.14),
+    0 1px 3px 0 rgba(0,0,0,.12);
+}

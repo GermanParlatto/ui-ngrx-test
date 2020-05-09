@@ -1,0 +1,16 @@
+<div class="card container">
+    <app-dropdown
+        [label]="'Regions'"
+        [options]="regions$ | async"
+        (onSelect)="regionSelected($event)"
+    ></app-dropdown>
+    <app-dropdown
+        [label]="'Countries'"
+        [optionLabel]="'Name'"
+        [options]="contries$ | async"
+        (onSelect)="contrySelected($event)"
+    ></app-dropdown>
+    <ng-container *ngIf="country$ | async as country">
+        <app-country-detail [country]="country"></app-country-detail>
+    </ng-container>
+</div>

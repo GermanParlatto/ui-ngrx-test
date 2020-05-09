@@ -1,0 +1,16 @@
+<table class="table">
+    <tr class="table__row">
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Currencies</th>
+        <th>Flag</th>
+    </tr>
+    <tr class="table__row">
+        <td>{{ country?.Name }}</td>
+        <td>{{ country?.Capital }}</td>
+        <td>{{ country?.Population | number }}</td>
+        <td>{{ getCurrency() }}</td>
+        <td><img class="flag" [src]="country?.FlagSVG" /></td>
+    </tr>
+</table>
