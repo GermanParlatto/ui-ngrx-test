@@ -35,7 +35,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ### Running end-to-end tests
 
-Run `ng serve`, then in another terminal run `npm cypress:open` to execute the end-to-end tests via [Cypress](http://www.cypress.io/).
+Run `ng serve`, then in another terminal run `npm run cypress:open` to execute the end-to-end tests via [Cypress](http://www.cypress.io/).
 
 ### Test Coverage
 
